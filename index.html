@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Cathy Deng</title>
+    <title>Nathan Wu</title>
     <meta name="description" content="Nathan Wu's website">
     <meta name="author" content="Nathan Wu">
 
@@ -18,7 +18,10 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/custom.css" rel="stylesheet" type="text/css" media="all">
-
+      
+    <!-- Map!!! -->  
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css"/>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
 
     <!-- google analytics -->
     <script>
@@ -32,7 +35,7 @@
 
   </head>
 
-  <body>
+<body>
 
     <div class="content">
         <div class="row-fluid">
@@ -42,17 +45,15 @@
             </div>
 
             <div class="col-sm-7">
-              <h3>Yoho! I'm Nathan</h3>
+              <h3>Hi! I'm Nathan</h3>
 
               <p>
-                I <i class="fa fa-fw fa-heart-o"></i> <i class="fa fa-futbol-o"></i>
-                photography, 
-                <a href="http://expunge.io">cooking </a>, 
-                , football & games.
+                I <i class="fa fa-fw fa-heart-o"></i>
+                photography, cooking, <i class="fa fa-futbol-o"></i> & games.
               </p>
 
               <p>
-                I work @ Esri, where I make the <i class="fa fa-globe"></i> better & help GIS folks to finish many awesome projects.
+                I work @ Esri, where I make <i class="fa fa-map-o"></i> to <i class="fa fa-globe"></i> & help GIS folks to finish many awesome projects <i class="fa fa-cog fa-spin"></i>.
               </p>
 
               <h2 id="social-icons">
@@ -62,6 +63,31 @@
                 <a href="http://www.linkedin.com/in/wuyue1"><i class="fa fa-fw fa-linkedin"></i></a>&nbsp
               </h2>
             </div>
+        </div>
+        
+        <div id="map" style="width: 850px; height: 300px; position: center;">
+            <script>
+            var map = L.map('map').setView([35, 10], 2);
+
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+                
+            var LeafIcon = L.Icon.extend({
+			options: {
+				iconSize:[35, 35]
+			}
+		});    
+                
+            var esri = new LeafIcon({iconUrl: '/images/esri.png'}),
+			school = new LeafIcon({iconUrl: '/images/ua.png'}),
+			hometown = new LeafIcon({iconUrl: '/images/Hometown.png'});
+
+		L.marker([34.056313, -117.189231], {icon: esri}).bindPopup("This is where I work.").addTo(map);
+		L.marker([33.214028, -87.539083], {icon: school}).bindPopup("Roll Tide!").addTo(map);
+		L.marker([36.070341, 120.379130], {icon: hometown}).bindPopup("My hometown and Tsingdao Beer").addTo(map);
+    
+            </script>
         </div>
     </div>
 

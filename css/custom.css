@@ -1,0 +1,61 @@
+@font-face {
+  font-family: Caviar_Dreams_Bold;
+  src: url(/fonts/Caviar_Dreams_Bold.ttf);
+}
+
+@font-face {
+  font-family: CaviarDreams_Italic;
+  src: url(/fonts/CaviarDreams_Italic.ttf);
+}
+
+@font-face {
+  font-family: CaviarDreams;
+  src: url(/fonts/CaviarDreams.ttf);
+}
+
+h3 {
+  font-family: Caviar_Dreams;
+  font-size: 2.7em;
+}
+
+h4 {
+  font-family: CaviarDreams_Italic;
+  font-size: 1.6em;
+}
+
+p {
+  font-family: CaviarDreams;
+  font-size: 1.4em;
+}
+
+#face img{
+  border-radius: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 190px;
+  width: 190px;
+}
+
+#face{
+  padding-top: 1.2em;
+  padding-bottom: 1em;
+}
+
+.content{
+  padding-top: 3em;
+}
+
+
+body{
+  background-color: none;
+}
+
+a{
+  color:#eeb111;
+}
+
+a:hover{
+  color:#ffd700;
+  text-decoration: none;
+}
