@@ -56,16 +56,20 @@
                 I work @ Esri, where I make <i class="fa fa-map-o"></i> to <i class="fa fa-globe"></i> & help GIS folks to finish many awesome projects <i class="fa fa-cog fa-spin"></i>.
               </p>
 
+              <p>
+                <a href="https://goldenlimit.github.io/Portfolio/index.html">My Portfolio</a>
+              </p>
+
               <h2 id="social-icons">
-                <a href="https://github.com/goldenlimit"><i class="fa fa-fw fa-github"></i></a>
-                <a href="http://www.linkedin.com/in/wuyue1"><i class="fa fa-fw fa-linkedin"></i></a>&nbsp
+                <a href="https://twitter.com/goldenlimit"><i class="fa fa-fw fa-twitter"></i></a>&nbsp
+                <a href="https://github.com/goldenlimit"><i class="fa fa-fw fa-github"></i></a>&nbsp
                 <a href="http://www.500px.com/goldenlimit"><i class="fa fa-camera-retro"></i></a>&nbsp
-                <a href="http://steamcommunity.com/id/goldenlimit/"><i class="fa fa-steam"></i></a>&nbsp
+                <a href="http://www.linkedin.com/in/wuyue1"><i class="fa fa-fw fa-linkedin"></i></a>&nbsp
               </h2>
             </div>
         </div>
         
-        <div id="map" style="width: 850px; height: 300px; position: center;">
+        <div id="map">
             <script>
             var map = L.map('map').setView([35, 10], 2);
 
@@ -86,7 +90,7 @@
 		L.marker([34.056313, -117.189231], {icon: esri}).bindPopup("This is where I work.").addTo(map);
 		L.marker([33.214028, -87.539083], {icon: school}).bindPopup("Roll Tide!").addTo(map);
 		L.marker([36.070341, 120.379130], {icon: hometown}).bindPopup("My hometown and Tsingdao Beer").addTo(map);
-    
+                
         var popup = L.popup();
 
 		function onMapClick(e) {
@@ -97,6 +101,7 @@
 		}
 
 		map.on('click', onMapClick);
+    
             </script>
         </div>
     </div>
