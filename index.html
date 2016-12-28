@@ -32,14 +32,10 @@
     ga('create', 'UA-68379703-1', 'goldenlimit.github.io');
     ga('send', 'pageview');
     </script>
-
   </head>
-
-<body>
-
+  <body>
     <div class="content">
         <div class="row-fluid">
-
             <div class="col-sm-3 col-sm-offset-1" id="face">
                 <img src="/images/face.jpeg">
             </div>
@@ -56,7 +52,7 @@
                 I work @ Esri, where I make <i class="fa fa-map-o"></i> to <i class="fa fa-globe"></i> & help GIS folks to finish many awesome projects <i class="fa fa-cog fa-spin"></i>.
               </p>
               <p>
-                <a href="Portfolio/index.html">My Portfolio</a>
+                <a href="goldenlimit.github.io/Portfolio/index.html">My Portfolio</a>
               </p>
                 
               <h2 id="social-icons">
@@ -67,10 +63,10 @@
               </h2>
             </div>
         </div>
-        
-        <div id="map">
+        <div class="row-fluid">
+        <div id= "map" class="col-sm-10" style="background-color:lightcyan;">
             <script>
-            var map = L.map('map').setView([35, 10], 2);
+            var map = L.map('map').setView([35, 10], 1);
 
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -102,8 +98,8 @@
 		map.on('click', onMapClick);
     
             </script>
+            </div>
         </div>
     </div>
-
   </body>
 </html>

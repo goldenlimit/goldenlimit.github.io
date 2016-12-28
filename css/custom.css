@@ -24,11 +24,12 @@ p {
 }
 
 #map {
-    margin-top: 300px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 1.6em auto;
+    width: 200px;
     height: 350px;
-    width: auto;
+    min-height: 100%;
+    min-width: 100%;
+    display: block;                      
 }
 
 #face img{
